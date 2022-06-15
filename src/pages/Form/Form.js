@@ -1,6 +1,5 @@
 
 import { useState, useReducer } from "react";
-<<<<<<< HEAD:src/pages/From.js
 import { TextField, Alert, AlertTitle } from "@mui/material";
 // import Button from "@mui/material/Button";
 // import SendIcon from "@mui/icons-material/Send";
@@ -70,12 +69,6 @@ const reducer = (state, action) => {
     };
   }
 };
-=======
-
-import "./form.css";
-import { TextField, Alert, AlertTitle } from "@mui/material";
-import { display, style } from "@mui/system";
->>>>>>> b40012804269834911aac640f6b16e5c53b36bfd:src/pages/Form/Form.js
 
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
@@ -234,13 +227,7 @@ const Form = () => {
               : "Your form has been Submmitted!"}
           </Alert>
         ) : (
-<<<<<<< HEAD:src/pages/From.js
-          <h1 className="appointment-title">
-            Please fill the form to schedule an Appointment{" "}
-          </h1>
-=======
           <p className="title">Make an Appointment </p>
->>>>>>> b40012804269834911aac640f6b16e5c53b36bfd:src/pages/Form/Form.js
         )}
         {!formData.error && state.isModalOpen ? (
           <div className="success">
@@ -309,7 +296,6 @@ const Form = () => {
                   variant="standard"
                 />
               </div>
-<<<<<<< HEAD:src/pages/From.js
               {/* <div className="form-item">
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   <DatePicker
@@ -330,22 +316,6 @@ const Form = () => {
 
               {/* <Button className="first-button" variant="contained" endIcon={<SendIcon />}></Button> */}
               <FiristButton />
-=======
-              <div className="form-item">
-                <LocalizationProvider   className="datePicker" dateAdapter={AdapterDateFns}>
-                  <DatePicker
-                    label="Choice of Appointment Day"
-                    value={value}
-                    onChange={(newValue) => {
-                    setValue(newValue)}}
-                    renderInput={(params) => <TextField {...params} />}
-                  />
-                </LocalizationProvider>
-              </div>
-              <button className="btn btn-secondary form-btn" type="submit">
-                Submit
-              </button>
->>>>>>> b40012804269834911aac640f6b16e5c53b36bfd:src/pages/Form/Form.js
             </form>
           </div>
         )}
