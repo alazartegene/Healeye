@@ -27,11 +27,11 @@
 }
 .footer a i.fa {
     font-size: 24px;
-    color: #b1b1b1;
+    color: #bec5c5;
     padding: 22px 10px;
 }
 .footer a i.fa:hover {
-    color: #42b3e5;
+    color: #85bed6;
 }
 .carousel-inner {
     position: relative;
