@@ -2,9 +2,18 @@ import { useState, useReducer } from "react";
 import "./form.css";
 import { TextField, Alert, AlertTitle } from "@mui/material";
 import { display, style } from "@mui/system";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+// date-fns
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+// or for Day.js
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+// or for Luxon
+import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
+// or for Moment.js
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 const reducer = (state, action) => {
   if (action.type === "FNAME") {
     const newPatient = { ...state.Patient, firstName: action.payload };
@@ -216,6 +225,7 @@ const Form = () => {
                   variant="standard"
                 />
               </div>
+              <div className="form-item">
               <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <DatePicker
                   label="Basic example"
@@ -226,6 +236,7 @@ const Form = () => {
                   renderInput={(params) => <TextField {...params} />}
                 />
               </LocalizationProvider>
+              </div>
               <button className="btn btn-secondary form-btn" type="submit">
                 Submit
               </button>
