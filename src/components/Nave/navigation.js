@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+<<<<<<< HEAD:src/components/navigation.js
 
+=======
+import LogoSvg from "../svg/LogoSvg";
+import logo from "../../Image/logo.png"
+>>>>>>> b40012804269834911aac640f6b16e5c53b36bfd:src/components/Nave/navigation.js
 import "./nav.css";
 
 
@@ -17,9 +22,14 @@ const Navigation = () => {
       <header className="nav-container">
         <div className="nav">
           <div className="nav-logo">
+<<<<<<< HEAD:src/components/navigation.js
             
+=======
+            {/* <LogoSvg /> */}
+            <img className="logo" src={logo} alt="" />
+>>>>>>> b40012804269834911aac640f6b16e5c53b36bfd:src/components/Nave/navigation.js
             <h1>
-              <span>Heal</span>Eye
+              {/* <span>Heal</span>Eye */}
             </h1>
           </div>
           <div className={`${open ? "nav-links toggle" : "nav-links"}`}>

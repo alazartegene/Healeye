@@ -1,10 +1,10 @@
 // import Hero from "./components/hero";
-import Navigation from "./components/navigation";
+import Navigation from "./components/Nave/navigation.js";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route, useRoutes } from "react-router-dom";
-import Form from "./pages/From";
-import Home from "./pages/Home";
-import DocSvg from "./components/DocSvg";
+import Form from "./pages/Form/Form";
+import Home from "./pages/Home/Home";
+import DocSvg from "./components/svg/DocSvg";
 
 const App = () => {
  
@@ -17,7 +17,7 @@ const App = () => {
       <Route path="/" element={<Home />}></Route>
       <Route path="book" element={<Form />}></Route>
     </Routes>
-    {/* <DocSvg/> */}
+    <DocSvg/>
     </BrowserRouter>
     
     </>

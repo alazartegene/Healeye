@@ -2,15 +2,23 @@
     position: relative;
     text-align: center;
     max-width: 50rem;
+<<<<<<< HEAD:src/pages/form.css
     max-height: 60rem;
     margin: 2rem auto;
+=======
+    margin: 5rem auto;
+>>>>>>> b40012804269834911aac640f6b16e5c53b36bfd:src/pages/Form/form.css
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD:src/pages/form.css
     border-radius: 10px;
+=======
+>>>>>>> b40012804269834911aac640f6b16e5c53b36bfd:src/pages/Form/form.css
     background-color: #f1f5f8;
     box-shadow: 0 0 10px lightslategray;
+    border-radius: 15px;
 }
 
 .warning {
@@ -116,4 +124,13 @@ input[type="email"]{
     /* border: none; */
     /* outline: 1px solid grey; */
 }
+.datePicker{
+    font-size: 1.8rem;
+}
+
+
+
+
+
+
 

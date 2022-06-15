@@ -19,9 +19,9 @@ const DocSvg = () => {
             y2="276.47"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="gray" stop-opacity="0.25" />
-            <stop offset="0.54" stop-color="gray" stop-opacity="0.12" />
-            <stop offset="1" stop-color="gray" stop-opacity="0.1" />
+            <stop offset="0" stopColor="gray" stopOpacity="0.25" />
+            <stop offset="0.54" stopColor="gray" stopOpacity="0.12" />
+            <stop offset="1" stopColor="gray" stopOpacity="0.1" />
           </linearGradient>
           <linearGradient
             id="b7415561-023b-44da-badb-9b3453976a8a-12"
@@ -945,8 +945,8 @@ const DocSvg = () => {
           transform="translate(-15.95 -18.56)"
           fill="none"
           stroke="#535461"
-          stroke-miterlimit="10"
-          stroke-width="2"
+          strokeMiterlimit="10"
+          strokeWidth="2"
         />
         <path
           d="M120.53,541.68c19.88,14.37,28.16,36.86,28.16,36.86s-24-.82-43.83-15.19S76.7,526.48,76.7,526.48,100.66,527.3,120.53,541.68Z"
@@ -958,8 +958,8 @@ const DocSvg = () => {
           transform="translate(-15.95 -18.56)"
           fill="none"
           stroke="#535461"
-          stroke-miterlimit="10"
-          stroke-width="2"
+          strokeMiterlimit="10"
+          strokeWidth="2"
         />
         <path
           d="M177.57,577.4c-22.83,25.09-27.66,57.88-27.66,57.88s32.19-7.9,55-33,27.66-57.88,27.66-57.88S200.4,552.31,177.57,577.4Z"
@@ -971,8 +971,8 @@ const DocSvg = () => {
           transform="translate(-15.95 -18.56)"
           fill="none"
           stroke="#535461"
-          stroke-miterlimit="10"
-          stroke-width="2"
+          strokeMiterlimit="10"
+          strokeWidth="2"
         />
       </svg>
     </>

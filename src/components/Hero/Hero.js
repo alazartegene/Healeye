@@ -1,8 +1,8 @@
 import React from "react";
-import DocSvg from "./DocSvg";
-import heroImage from "./doctor.png";
+import DocSvg from "../svg/DocSvg";
+import heroImage from "../../Image/doctor.png";
 import "./hero.css";
-import Kume from "./Kume";
+import Kume from "../svg/Kume";
 const Hero = () => {
   return (
     <>
