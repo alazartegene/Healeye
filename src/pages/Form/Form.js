@@ -1,21 +1,7 @@
-
 import { useState, useReducer } from "react";
 import { TextField, Alert, AlertTitle } from "@mui/material";
-// import Button from "@mui/material/Button";
-// import SendIcon from "@mui/icons-material/Send";
-// import Box from "@mui/material/Box";
-// import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-// import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-// import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-
-// import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
-
-// import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
-
-// import { display, style } from "@mui/system";
 import "./form.css";
-import FiristButton from "../components/UI/FiristButton";
+import FiristButton from "../../components/UI/FiristButton";
 
 const reducer = (state, action) => {
   if (action.type === "FNAME") {
@@ -70,21 +56,9 @@ const reducer = (state, action) => {
   }
 };
 
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-// date-fns
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-// or for Day.js
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-// or for Luxon
-import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
-// or for Moment.js
-import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-
 const Form = () => {
   const [value, setValue] = useState(null);
-  const reducer = (state, action) => {  
+  const reducer = (state, action) => {
     if (action.type === "FNAME") {
       const newPatient = { ...state.Patient, firstName: action.payload };
       return {
@@ -142,7 +116,6 @@ const Form = () => {
     isModalOpen: false,
     modalContent: "",
   };
-
 
   const [state, dispatch] = useReducer(reducer, initialState);
   const [formData, setFormData] = useState({
@@ -227,7 +200,9 @@ const Form = () => {
               : "Your form has been Submmitted!"}
           </Alert>
         ) : (
-          <p className="title">Make an Appointment </p>
+          <h1 className="title">
+            Please fill the form to schedule an Appointment{" "}
+          </h1>
         )}
         {!formData.error && state.isModalOpen ? (
           <div className="success">
@@ -277,17 +252,6 @@ const Form = () => {
               <div className="form-item">
                 <TextField
                   className="text-field"
-                  type="email"
-                  value={formData.email}
-                  onChange={emailHanddler}
-                  id="standard-basic"
-                  label="Email Address"
-                  variant="standard"
-                />
-              </div>
-              <div className="form-item">
-                <TextField
-                  className="text-field"
                   type="number"
                   value={formData.phone}
                   onChange={phoneHanddler}
@@ -296,6 +260,18 @@ const Form = () => {
                   variant="standard"
                 />
               </div>
+              <div className="form-item">
+                <TextField
+                  className="text-field"
+                  type="email"
+                  value={formData.email}
+                  onChange={emailHanddler}
+                  id="standard-basic"
+                  label="Email Address"
+                  variant="standard"
+                />
+              </div>
+
               {/* <div className="form-item">
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   <DatePicker
