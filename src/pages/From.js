@@ -1,7 +1,21 @@
 import { useState, useReducer } from "react";
-import "./form.css";
 import { TextField, Alert, AlertTitle } from "@mui/material";
-import { display, style } from "@mui/system";
+// import Button from "@mui/material/Button";
+// import SendIcon from "@mui/icons-material/Send";
+// import Box from "@mui/material/Box";
+// import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+// import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+// import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+
+// import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
+
+// import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
+
+// import { display, style } from "@mui/system";
+import "./form.css";
+import FiristButton from "../components/UI/FiristButton";
+
 const reducer = (state, action) => {
   if (action.type === "FNAME") {
     const newPatient = { ...state.Patient, firstName: action.payload };
@@ -122,6 +136,7 @@ const Form = () => {
       return { ...prev, phone: e.target.value };
     });
   };
+
   return (
     <>
       <div className="container">
@@ -144,7 +159,9 @@ const Form = () => {
               : "Your form has been Submmitted!"}
           </Alert>
         ) : (
-          <p className="title">Please book your Service Now </p>
+          <h1 className="appointment-title">
+            Please fill the form to schedule an Appointment{" "}
+          </h1>
         )}
         {!formData.error && state.isModalOpen ? (
           <div className="success">
@@ -213,9 +230,26 @@ const Form = () => {
                   variant="standard"
                 />
               </div>
-              <button className="btn btn-secondary form-btn" type="submit">
-                Book
-              </button>
+              {/* <div className="form-item">
+                <LocalizationProvider dateAdapter={AdapterDateFns}>
+                  <DatePicker
+                    label="Apointment Date"
+                    value={value}
+                    onChange={(newValue) => {
+                      setValue(newValue);
+                    }}
+                    renderInput={({ inputRef, inputProps, InputProps }) => (
+                      <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <input ref={inputRef} {...inputProps} />
+                        {InputProps?.endAdornment}
+                      </Box>
+                    )}
+                  />
+                </LocalizationProvider>
+              </div> */}
+
+              {/* <Button className="first-button" variant="contained" endIcon={<SendIcon />}></Button> */}
+              <FiristButton />
             </form>
           </div>
         )}

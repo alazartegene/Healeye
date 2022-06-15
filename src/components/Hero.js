@@ -20,7 +20,7 @@ const Hero = () => {
           </a>
         </div>
         <div className="hero-image">
-          <Kume />
+          <Kume p="width:340 height:480" />
         </div>
       </section>
     </>

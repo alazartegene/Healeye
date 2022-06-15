@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import LogoSvg from "./LogoSvg";
+
 import "./nav.css";
+
 
 const Navigation = () => {
   let activeStyle = {
@@ -16,7 +17,7 @@ const Navigation = () => {
       <header className="nav-container">
         <div className="nav">
           <div className="nav-logo">
-            <LogoSvg />
+            
             <h1>
               <span>Heal</span>Eye
             </h1>
