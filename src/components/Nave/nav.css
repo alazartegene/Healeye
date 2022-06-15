@@ -182,3 +182,8 @@ transform: translateY(-4px);
     display: block;
   }
 }
+
+.logo{
+  width:8rem;
+  height:6rem;
+}

@@ -11,7 +11,7 @@ export default [
   },
   {
     id: 3,
-    name: "Rediat Zelalem",
+    name: "Rediat Terefe",
     age: 28,
   },
 ];
