@@ -1,4 +1,6 @@
+
 import { useState, useReducer } from "react";
+
 import "./form.css";
 import { TextField, Alert, AlertTitle } from "@mui/material";
 import { display, style } from "@mui/system";
@@ -7,73 +9,76 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 // date-fns
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 // or for Day.js
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 // or for Luxon
-import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
+import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
 // or for Moment.js
-import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
-const reducer = (state, action) => {
-  if (action.type === "FNAME") {
-    const newPatient = { ...state.Patient, firstName: action.payload };
-    return {
-      ...state,
-      Patient: newPatient,
-    };
-  }
-  if (action.type === "LNAME") {
-    const newPatient = { ...state.Patient, lastName: action.payload };
-    return {
-      ...state,
-      Patient: newPatient,
-    };
-  }
-  if (action.type === "AGE") {
-    const newPatient = { ...state.Patient, age: action.payload };
-    return {
-      ...state,
-      Patient: newPatient,
-    };
-  }
-  if (action.type === "EMAIL") {
-    const newPatient = { ...state.Patient, email: action.payload };
-    return {
-      ...state,
-      Patient: newPatient,
-    };
-  }
-  if (action.type === "PHONE") {
-    const newPatient = { ...state.Patient, phone: action.payload };
-    return {
-      ...state,
-      Patient: newPatient,
-    };
-  }
-  if (action.type === "SUBMIT") {
-    console.log(state.Patient);
-    return {
-      ...state,
-      isModalOpen: true,
-      modalContent: "Form Submitted Successfully !",
-    };
-  }
-  if (action.type === "ERROR") {
-    return {
-      ...state,
-      isModalOpen: true,
-      modalContent: "Please Fill the required Contents !",
-    };
-  }
-};
-
-let initialState = {
-  Patient: {},
-  isModalOpen: false,
-  modalContent: "",
-};
+import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 
 const Form = () => {
+  const [value, setValue] = useState(null);
+  const reducer = (state, action) => {  
+    if (action.type === "FNAME") {
+      const newPatient = { ...state.Patient, firstName: action.payload };
+      return {
+        ...state,
+        Patient: newPatient,
+      };
+    }
+    if (action.type === "LNAME") {
+      const newPatient = { ...state.Patient, lastName: action.payload };
+      return {
+        ...state,
+        Patient: newPatient,
+      };
+    }
+    if (action.type === "AGE") {
+      const newPatient = { ...state.Patient, age: action.payload };
+      return {
+        ...state,
+        Patient: newPatient,
+      };
+    }
+    if (action.type === "EMAIL") {
+      const newPatient = { ...state.Patient, email: action.payload };
+      return {
+        ...state,
+        Patient: newPatient,
+      };
+    }
+    if (action.type === "PHONE") {
+      const newPatient = { ...state.Patient, phone: action.payload };
+      return {
+        ...state,
+        Patient: newPatient,
+      };
+    }
+    if (action.type === "SUBMIT") {
+      console.log(state.Patient);
+      return {
+        ...state,
+        isModalOpen: true,
+        modalContent: "Form Submitted Successfully !",
+      };
+    }
+    if (action.type === "ERROR") {
+      return {
+        ...state,
+        isModalOpen: true,
+        modalContent: "Please Fill the required Contents !",
+      };
+    }
+  };
+
+  let initialState = {
+    Patient: {},
+    isModalOpen: false,
+    modalContent: "",
+  };
+
+
   const [state, dispatch] = useReducer(reducer, initialState);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -226,16 +231,15 @@ const Form = () => {
                 />
               </div>
               <div className="form-item">
-              <LocalizationProvider dateAdapter={AdapterDateFns}>
-                <DatePicker
-                  label="Basic example"
-                  value={value}
-                  onChange={(newValue) => {
-                    setValue(newValue);
-                  }}
-                  renderInput={(params) => <TextField {...params} />}
-                />
-              </LocalizationProvider>
+                <LocalizationProvider   className="datePicker" dateAdapter={AdapterDateFns}>
+                  <DatePicker
+                    label="Choice of Appointment Day"
+                    value={value}
+                    onChange={(newValue) => {
+                    setValue(newValue)}}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
               </div>
               <button className="btn btn-secondary form-btn" type="submit">
                 Submit
