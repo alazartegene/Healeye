@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f1f5f8;
+ /* overflow: hidden; */
+  font-family: sans-serif;
+}
+@media screen and (max-width: 780px) {
+  html {
+    font-size: 50%;
+  }
+}
