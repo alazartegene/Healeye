@@ -2,6 +2,11 @@ import { useState, useReducer } from "react";
 import { TextField, Alert, AlertTitle } from "@mui/material";
 import "./form.css";
 import FiristButton from "../../components/UI/FiristButton";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
+import isWeekend from "date-fns/isWeekend";
 
 const reducer = (state, action) => {
   if (action.type === "FNAME") {
@@ -55,9 +60,8 @@ const reducer = (state, action) => {
     };
   }
 };
-
 const Form = () => {
-  const [value, setValue] = useState(null);
+  // const [value, setValue] = useState(null);
   const reducer = (state, action) => {
     if (action.type === "FNAME") {
       const newPatient = { ...state.Patient, firstName: action.payload };
@@ -118,6 +122,7 @@ const Form = () => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [value, setValue] = useState(new Date());
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -271,27 +276,22 @@ const Form = () => {
                   variant="standard"
                 />
               </div>
-
-              {/* <div className="form-item">
-                <LocalizationProvider dateAdapter={AdapterDateFns}>
-                  <DatePicker
-                    label="Apointment Date"
-                    value={value}
-                    onChange={(newValue) => {
-                      setValue(newValue);
-                    }}
-                    renderInput={({ inputRef, inputProps, InputProps }) => (
-                      <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <input ref={inputRef} {...inputProps} />
-                        {InputProps?.endAdornment}
-                      </Box>
-                    )}
-                  />
-                </LocalizationProvider>
-              </div> */}
-
-              {/* <Button className="first-button" variant="contained" endIcon={<SendIcon />}></Button> */}
-              <FiristButton />
+              <div className="form-item">
+              <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <DatePicker
+        label="Basic example"
+        value={value}
+        onChange={(newValue) => {
+          setValue(newValue);
+        }}
+        renderInput={(params) => <TextField {...params} />}
+        
+      />
+    </LocalizationProvider>
+              </div>
+              <div className="buttonHolder">
+                <FiristButton />
+              </div>
             </form>
           </div>
         )}

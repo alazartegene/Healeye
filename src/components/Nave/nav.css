@@ -6,23 +6,16 @@
   font-family: sans-serif;
   box-shadow: 5px 0 10px grey;
   margin-bottom: 1rem;
-  /* position: fixed; */
+  height: 8rem;
 }
 .nav {
   width: 95%;
   display: flex;
   justify-content: space-between;
 }
-.nav-logo {
-  font-size: 1.4rem;
-  padding: 2rem;
-  font-weight: 700;
-}
-.nav-logo h1 {
-  color: #242f9b;
-}
-.nav-logo h1 span {
-  color: green;
+.nav-logo img{
+width: 6.25rem;
+height: 5rem;
 }
 .nav-links {
   display: flex;
@@ -156,8 +149,6 @@ transform: translateY(-4px);
   transform: rotate(90deg);
   transform: translateY(0px);
 }
-
-
 
 .open .menu-top,
 .open:hover .menu-top{
