@@ -92,10 +92,10 @@ input[type="text"] {
   padding: 0.5rem 1rem;
 }
 .text-field {
-  font-size: 1.8rem;
+  font-size: 1.8rem !important;
 }
 .text-field label {
-  font-size: 1.8rem;
+  font-size: 1.8rem !important;
 }
 input[type="number"] {
   font-size: 1.8rem;
@@ -108,3 +108,12 @@ input[type="email"] {
 .datePicker {
   font-size: 1.8rem;
 }
+
+.buttonHolder{
+  margin:auto;
+}
+
+.date-pickerr label {
+  font-size: 1.9rem !important;
+}
+
