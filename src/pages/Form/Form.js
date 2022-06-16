@@ -1,7 +1,8 @@
 import { useState, useReducer } from "react";
 import { TextField, Alert, AlertTitle } from "@mui/material";
 import "./form.css";
-import FiristButton from "../../components/UI/FiristButton";
+// import FiristButton from "../../components/UI/FiristButton";
+import OutlinedButton from "../../components/UI/OutlinedButton";
 
 const reducer = (state, action) => {
   if (action.type === "FNAME") {
@@ -184,8 +185,8 @@ const Form = () => {
         {state.isModalOpen ? (
           <Alert
             sx={{
-              fontSize: "1.8rem",
-
+              backgroundColor: '#E8F9FD',
+              fontSize: "2rem",
               "& .MuiAlert-icon": { fontSize: "5rem" },
             }}
             onClose={() => {}}
@@ -271,27 +272,8 @@ const Form = () => {
                   variant="standard"
                 />
               </div>
-
-              {/* <div className="form-item">
-                <LocalizationProvider dateAdapter={AdapterDateFns}>
-                  <DatePicker
-                    label="Apointment Date"
-                    value={value}
-                    onChange={(newValue) => {
-                      setValue(newValue);
-                    }}
-                    renderInput={({ inputRef, inputProps, InputProps }) => (
-                      <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <input ref={inputRef} {...inputProps} />
-                        {InputProps?.endAdornment}
-                      </Box>
-                    )}
-                  />
-                </LocalizationProvider>
-              </div> */}
-
-              {/* <Button className="first-button" variant="contained" endIcon={<SendIcon />}></Button> */}
-              <FiristButton />
+              {/* <OutlinedButton /> */}
+              <button type="submit" className="btn btn-primary"  >Submit</button>
             </form>
           </div>
         )}

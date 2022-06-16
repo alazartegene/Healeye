@@ -6,7 +6,7 @@ const Hero = () => {
     <>
       <section className="hero">
         <div className="hero-text">
-          <h1>We Care About Your Health</h1>
+          <h1>Because, We Care For Four Eye Health</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
             corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -14,7 +14,7 @@ const Hero = () => {
             Nam, laboriosam!
           </p>
           <a className="hero-btn" href="#">
-            Get our Service now
+            Achedule Appointment Now
           </a>
         </div>
         <div className="hero-image">

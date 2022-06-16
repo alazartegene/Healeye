@@ -5,7 +5,7 @@ const Footer =()=>{
     return(
         <footer className="footer clearfix">
 		<div>
-			<div className="row">
+			<div className="footer-row">
 				<div className="col-xs-6 footer-para">
 					<p>&copy; All right reserved</p>
 				</div>
