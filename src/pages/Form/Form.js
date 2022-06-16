@@ -1,22 +1,24 @@
 
 import { useState, useReducer } from "react";
 import { TextField, Alert, AlertTitle } from "@mui/material";
-// import Button from "@mui/material/Button";
-// import SendIcon from "@mui/icons-material/Send";
-// import Box from "@mui/material/Box";
-// import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-// import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-// import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-
-// import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
-
-// import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
-
-// import { display, style } from "@mui/system";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
+import Box from "@mui/material/Box";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { display, style } from "@mui/system";
 import "./form.css";
 import FiristButton from "../components/UI/FiristButton";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+// date-fns
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+// or for Day.js
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+// or for Luxon
+import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
+// or for Moment.js
+import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 
+import FiristButton from '../../components/UI/FiristButton'
 const reducer = (state, action) => {
   if (action.type === "FNAME") {
     const newPatient = { ...state.Patient, firstName: action.payload };
@@ -70,17 +72,9 @@ const reducer = (state, action) => {
   }
 };
 
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-// date-fns
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-// or for Day.js
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-// or for Luxon
-import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
-// or for Moment.js
-import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
+
+
 
 const Form = () => {
   const [value, setValue] = useState(null);
@@ -296,7 +290,7 @@ const Form = () => {
                   variant="standard"
                 />
               </div>
-              {/* <div className="form-item">
+              <div className="form-item">
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   <DatePicker
                     label="Apointment Date"
@@ -312,7 +306,7 @@ const Form = () => {
                     )}
                   />
                 </LocalizationProvider>
-              </div> */}
+              </div>
 
               {/* <Button className="first-button" variant="contained" endIcon={<SendIcon />}></Button> */}
               <FiristButton />
