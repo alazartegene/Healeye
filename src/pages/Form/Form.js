@@ -1,17 +1,11 @@
 import { useState, useReducer } from "react";
 import { TextField, Alert, AlertTitle } from "@mui/material";
 import "./form.css";
-<<<<<<< HEAD
-// import FiristButton from "../../components/UI/FiristButton";
-import OutlinedButton from "../../components/UI/OutlinedButton";
-=======
-import FiristButton from "../../components/UI/FiristButton";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
 import isWeekend from "date-fns/isWeekend";
->>>>>>> 81bbdc236cc0a2c3a53e7a408e83f10f64214c29
 
 const reducer = (state, action) => {
   if (action.type === "FNAME") {
@@ -190,11 +184,11 @@ const Form = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="Main-container">
         {state.isModalOpen ? (
           <Alert
             sx={{
-              backgroundColor: '#E8F9FD',
+              backgroundColor: "#E8F9FD",
               fontSize: "2rem",
               "& .MuiAlert-icon": { fontSize: "5rem" },
             }}
@@ -281,27 +275,25 @@ const Form = () => {
                   variant="standard"
                 />
               </div>
-<<<<<<< HEAD
-              {/* <OutlinedButton /> */}
-              <button type="submit" className="btn btn-primary"  >Submit</button>
-=======
               <div className="form-item">
-              <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <DatePicker
-        label="Basic example"
-        value={value}
-        onChange={(newValue) => {
-          setValue(newValue);
-        }}
-        renderInput={(params) => <TextField {...params} />}
-        
-      />
-    </LocalizationProvider>
+                <LocalizationProvider dateAdapter={AdapterDateFns}>
+                  <DatePicker
+                    label="Basic example"
+                    value={value}
+                    onChange={(newValue) => {
+                      setValue(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
               </div>
-              <div className="buttonHolder">
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+
+              {/* <div className="buttonHolder">
                 <FiristButton />
-              </div>
->>>>>>> 81bbdc236cc0a2c3a53e7a408e83f10f64214c29
+              </div> */}
             </form>
           </div>
         )}

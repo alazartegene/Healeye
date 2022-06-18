@@ -1,4 +1,4 @@
-/* .Footerh{
+.Footerh{
     background-color: rgb(178, 213, 224);
     height: 200px;
     width: auto;
@@ -11,7 +11,7 @@
 .footer-para {
     margin: 0;
     padding: 0;
-} */
+}
 
 .footer-row{
     background-color: #79DAE8;
