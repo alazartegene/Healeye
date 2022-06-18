@@ -1,4 +1,3 @@
-
 import { useState, useReducer } from "react";
 import { TextField, Alert, AlertTitle } from "@mui/material";
 import Button from "@mui/material/Button";
@@ -7,7 +6,7 @@ import Box from "@mui/material/Box";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { display, style } from "@mui/system";
 import "./form.css";
-import FiristButton from "../components/UI/FiristButton";
+import firstButton from "../../components/UI/FiristButton";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 // date-fns
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
@@ -72,13 +71,9 @@ const reducer = (state, action) => {
   }
 };
 
-
-
-
-
 const Form = () => {
   const [value, setValue] = useState(null);
-  const reducer = (state, action) => {  
+  const reducer = (state, action) => {
     if (action.type === "FNAME") {
       const newPatient = { ...state.Patient, firstName: action.payload };
       return {
@@ -137,7 +132,6 @@ const Form = () => {
     modalContent: "",
   };
 
-
   const [state, dispatch] = useReducer(reducer, initialState);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -162,7 +156,7 @@ const Form = () => {
       });
     }
   };
-
+  
   const fNameHanddler = (e) => {
     e.preventDefault();
     dispatch({ type: "FNAME", payload: e.target.value });
@@ -221,7 +215,9 @@ const Form = () => {
               : "Your form has been Submmitted!"}
           </Alert>
         ) : (
-          <p className="title">Make an Appointment </p>
+          <h1 className="title">
+            Please fill the form to schedule an Appointment{" "}
+          </h1>
         )}
         {!formData.error && state.isModalOpen ? (
           <div className="success">
@@ -271,22 +267,22 @@ const Form = () => {
               <div className="form-item">
                 <TextField
                   className="text-field"
-                  type="email"
-                  value={formData.email}
-                  onChange={emailHanddler}
+                  type="number"
+                  value={formData.phone}
+                  onChange={phoneHanddler}
                   id="standard-basic"
-                  label="Email Address"
+                  label="Phone Number"
                   variant="standard"
                 />
               </div>
               <div className="form-item">
                 <TextField
                   className="text-field"
-                  type="number"
-                  value={formData.phone}
-                  onChange={phoneHanddler}
+                  type="email"
+                  value={formData.email}
+                  onChange={emailHanddler}
                   id="standard-basic"
-                  label="Phone Number"
+                  label="Email Address"
                   variant="standard"
                 />
               </div>
@@ -309,7 +305,7 @@ const Form = () => {
               </div>
 
               {/* <Button className="first-button" variant="contained" endIcon={<SendIcon />}></Button> */}
-              <FiristButton />
+              <firstButton />
             </form>
           </div>
         )}

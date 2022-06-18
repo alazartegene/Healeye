@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./nav.css";
@@ -18,7 +19,7 @@ const Navigation = () => {
           <div className="nav-logo">
             
             <h1>
-              {/* <span>Heal</span>Eye */}
+              <span>Heal</span>Eye
             </h1>
           </div>
           <div className={`${open ? "nav-links toggle" : "nav-links"}`}>
