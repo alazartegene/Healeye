@@ -25,6 +25,7 @@
 }
 .SecondRowDiv{
   margin-bottom: 5%;
+  margin-left: 3%;
   display: flex;
   justify-content: space-betweens;
 }

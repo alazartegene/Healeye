@@ -1,12 +1,23 @@
 import { useState, useReducer } from "react";
 import { TextField, Alert, AlertTitle } from "@mui/material";
-import "./form.css";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
+import Box from "@mui/material/Box";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { display, style } from "@mui/system";
+import "./form.css";
+import firstButton from "../../components/UI/FiristButton";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
-import isWeekend from "date-fns/isWeekend";
+// date-fns
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+// or for Day.js
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+// or for Luxon
+import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
+// or for Moment.js
+import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 
+import FiristButton from '../../components/UI/FiristButton'
 const reducer = (state, action) => {
   if (action.type === "FNAME") {
     const newPatient = { ...state.Patient, firstName: action.payload };
@@ -145,7 +156,7 @@ const Form = () => {
       });
     }
   };
-
+  
   const fNameHanddler = (e) => {
     e.preventDefault();
     dispatch({ type: "FNAME", payload: e.target.value });
@@ -287,6 +298,11 @@ const Form = () => {
                   />
                 </LocalizationProvider>
               </div>
+<<<<<<< HEAD
+
+              {/* <Button className="first-button" variant="contained" endIcon={<SendIcon />}></Button> */}
+              <firstButton />
+=======
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
@@ -294,6 +310,7 @@ const Form = () => {
               {/* <div className="buttonHolder">
                 <FiristButton />
               </div> */}
+>>>>>>> 979e24f109b2dd207b5377ef1866fc75075620e0
             </form>
           </div>
         )}
