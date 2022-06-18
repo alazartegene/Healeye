@@ -17,7 +17,7 @@ import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
 // or for Moment.js
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 
-import FiristButton from '../../components/UI/FiristButton'
+
 const reducer = (state, action) => {
   if (action.type === "FNAME") {
     const newPatient = { ...state.Patient, firstName: action.payload };
@@ -298,19 +298,14 @@ const Form = () => {
                   />
                 </LocalizationProvider>
               </div>
-<<<<<<< HEAD
 
               {/* <Button className="first-button" variant="contained" endIcon={<SendIcon />}></Button> */}
-              <firstButton />
-=======
+           
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
 
-              {/* <div className="buttonHolder">
-                <FiristButton />
-              </div> */}
->>>>>>> 979e24f109b2dd207b5377ef1866fc75075620e0
+              
             </form>
           </div>
         )}
