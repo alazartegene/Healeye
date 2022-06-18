@@ -1,0 +1,202 @@
+.top-container {
+  max-width: 120rem;
+  height: fit-content;
+  background-color: transparent;
+}
+
+.Our-teams {
+  height: 10rem;
+  padding: 2px;
+  text-align: center;
+  margin: 3rem;
+}
+.team-heading h2 {
+  font-family: 'Mali', cursive;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.team-heading h4 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.Doctors-row {
+  display: flex;
+  height: fit-content;
+  padding-bottom: 1.5rem;
+  padding: 2rem 3rem 2rem;
+}
+.Second_row_of_doctors{
+  display: flex;
+  height: fit-content;
+  padding-bottom: 1.5rem;
+  padding: 2rem 3rem;
+}
+.Bottom-Doctors-column{
+  padding: 1rem;
+}
+.person-detail {
+  padding-top: 20rem;
+  padding: 10px;
+  margin: 25px 0rem 0.5rem;
+  line-height: 2.5rem;
+  position: relative;
+  transition: all 0.7s ease 0s;
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  -ms-transition: all 0.7s ease 0s;
+}
+.person-detail p {
+  font-family: 'Comfortaa', cursive;
+  text-decoration: solid;
+  text-align: justify;
+  padding: 1rem;
+  font-size: 13px;
+  color: rgb(85, 17, 68);
+  font-family: "Open Sans", sans-serif;
+}
+.person-detail h3 {
+  font-family: 'Lora', serif;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(81, 8, 83);
+}
+.person img {
+  padding: 1%;
+  align-self: center;
+  width: 100%;
+}
+.person-bottom{
+  align-items: center;
+  padding: 2rem;
+  margin: 0rem;
+}
+.arrow-bottom {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 1rem;
+  background: #3ba0cc;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  top: -9px;
+  left: 46%;
+  transition: all 0.7s ease 0s;
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  -ms-transition: all 0.7s ease 0s;
+}
+.single-member:hover .person-detail {
+  background: #2a2a2a;
+}
+.single-member:hover .arrow-top {
+  background: #2a2a2a;
+}
+.single-member:hover .arrow-bottom {
+  background: #2a2a2a;
+} 
+
+/* @media (min-width: 768px){
+  .person img{
+      flex: 0 0 auto;
+      width: 15;
+  }} */
+
+
+
+
+/* .team {
+    padding-bottom: 60px;
+}
+.team h2 {
+    font-size: 90px;
+    color: #42b3e5;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+.team h4 {
+    font-size: 24px;
+    color: #737373;
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+.single-member {
+    margin: 0;
+    padding: 0;
+}
+.person img {
+    width: 100%;
+}
+.person-detail {
+    padding: 10px;
+    background: #3a9cc8;
+    position: relative;
+    transition: all .7s ease 0s;
+    -webkit-transition: all .7s ease 0s;
+    -moz-transition: all .7s ease 0s;
+    -o-transition: all .7s ease 0s;
+    -ms-transition: all .7s ease 0s;
+}
+.arrow-top {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #3ba0cc;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    bottom: -10px;
+    left: 46%;
+    transition: all .7s ease 0s;
+    -webkit-transition: all .7s ease 0s;
+    -moz-transition: all .7s ease 0s;
+    -o-transition: all .7s ease 0s;
+    -ms-transition: all .7s ease 0s;
+}
+.arrow-bottom {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #3ba0cc;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    top: -9px;
+    left: 46%;
+    transition: all .7s ease 0s;
+    -webkit-transition: all .7s ease 0s;
+    -moz-transition: all .7s ease 0s;
+    -o-transition: all .7s ease 0s;
+    -ms-transition: all .7s ease 0s;
+}
+.person-detail h3 {
+    font-size: 30px;
+    color: #fff;
+}
+.person-detail p {
+    font-size: 13px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+.single-member:hover .person-detail {
+    background: #2a2a2a;
+}
+.single-member:hover .arrow-top {
+    background: #2a2a2a;
+}
+.single-member:hover .arrow-bottom {
+    background: #2a2a2a;
+} */

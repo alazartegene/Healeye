@@ -1,4 +1,4 @@
-/* .Footerh{
+.Footerh{
     background-color: rgb(178, 213, 224);
     height: 200px;
     width: auto;
@@ -11,9 +11,9 @@
 .footer-para {
     margin: 0;
     padding: 0;
-} */
+}
 
-.row{
+.footer-row{
     background-color: #79DAE8;
     height: 10rem;
 }
@@ -27,11 +27,11 @@
 }
 .footer a i.fa {
     font-size: 24px;
-    color: #b1b1b1;
+    color: #bec5c5;
     padding: 22px 10px;
 }
 .footer a i.fa:hover {
-    color: #42b3e5;
+    color: #85bed6;
 }
 .carousel-inner {
     position: relative;

@@ -9,22 +9,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import DocSvg from "./components/svg/DocSvg";
 
 const App = () => {
- 
   return (
     <>
-    <BrowserRouter>
-    <Navigation/>
-    <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="book" element={<Form />}></Route>
-    </Routes>
-    <Footer />
-    </BrowserRouter>
-    
+      <BrowserRouter>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="book" element={<Form />}></Route>
+        </Routes>
+      </BrowserRouter>
+     
     </>
-    
   );
-}
-
+};
 
 export default App;

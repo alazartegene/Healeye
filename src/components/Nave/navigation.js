@@ -1,6 +1,6 @@
-
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import logo  from "../../Image/logo.png"
 import "./nav.css";
 
 
@@ -9,18 +9,13 @@ const Navigation = () => {
     color: "#764af1",
   };
   const [open, setOpen] = useState(false);
-  // const activeStyleHunddler = (isActive)=>{
 
-  // // }
   return (
     <>
       <header className="nav-container">
         <div className="nav">
           <div className="nav-logo">
-            
-            <h1>
-              <span>Heal</span>Eye
-            </h1>
+              <img src={logo}/>
           </div>
           <div className={`${open ? "nav-links toggle" : "nav-links"}`}>
             <ul>
@@ -33,7 +28,6 @@ const Navigation = () => {
                 >
                   Home
                 </NavLink>
-                {/* <a href="">Home</a> */}
               </li>
               <li>
                 <NavLink

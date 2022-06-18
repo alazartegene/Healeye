@@ -1,4 +1,4 @@
-.container {
+.Main-container {
   position: relative;
   max-width: 50rem;
   margin: 5rem auto;
@@ -6,19 +6,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #E8F9FD;
+  background-color: #e8f9fd;
   box-shadow: 0 0 10px lightslategray;
   border-radius: 15px;
 }
 
 .warning {
-  /* font-size: 2rem;
-    /* text-size-adjust: 2rem; */
-  /* font-weight: 600;
-    width: 40rem;
-    padding: 1rem 2rem; */
-  /* box-shadow: 0 0 .5rem grey; */
   margin: 2rem auto;
+  background-color: #e8f9fd;
 }
 
 .success {
@@ -41,16 +36,21 @@
   margin: 0 auto;
 }
 .btn-primary {
-  color: white;
-  background-color: blueviolet;
+  color: rgb(56, 63, 66);
+  background-color: #e8f9fd;
+  outline: 2px solid rgb(81, 142, 235);
+  border-radius: 10px;
 }
 .btn-primary:hover,
 .btn-primary:active {
-  background-color: rgb(101, 27, 170);
+  outline: 2px solid rgb(4, 113, 255);
+  color: rgb(0, 0, 0);
 }
 .btn-secondary {
-  color: white;
-  background-color: #444;
+  color: rgb(56, 63, 66);
+  border-radius: 10px;
+  outline: 2px solid rgb(122, 153, 168);
+  box-shadow: 2px solid rgb(131, 133, 128);
 }
 .form-btn {
   margin-top: 3rem;
@@ -58,7 +58,8 @@
 }
 .btn-secondary:hover,
 .btn-secondary:active {
-  background-color: #333;
+  outline: 2px solid rgb(82, 186, 212);
+  color: rgb(0, 0, 0);
 }
 .title {
   font-family: cursive;
@@ -66,7 +67,6 @@
   font-size: 2rem;
   font-weight: 300;
   padding: 1rem 2rem;
-  /* box-shadow: 0 0 .5rem grey; */
   margin: 2rem auto 0 auto;
 }
 
@@ -76,7 +76,7 @@
   /* align-items: center; */
   gap: 1.5rem;
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding: 2rem;
 }
 .form-item {
@@ -90,31 +90,30 @@
 input[type="text"] {
   font-size: 1.8rem;
   padding: 0.5rem 1rem;
-  /* border-radius: 1rem; */
-  /* border: none; */
-  /* outline: 1px top solid grey; */
-  /* border-bottom: 1px solid grey; */
 }
 .text-field {
-  font-size: 1.8rem;
+  font-size: 1.8rem !important;
 }
 .text-field label {
-  font-size: 1.8rem;
+  font-size: 1.8rem !important;
 }
 input[type="number"] {
   font-size: 1.8rem;
   padding: 0.5rem 1rem;
-  /* border-radius: 1rem; */
-  /* border: none; */
-  /* outline: 1px solid grey; */
 }
 input[type="email"] {
   font-size: 1.8rem;
   padding: 0.5rem 1rem;
-  /* border-radius: 1rem; */
-  /* border: none; */
-  /* outline: 1px solid grey; */
 }
 .datePicker {
   font-size: 1.8rem;
 }
+
+.buttonHolder{
+  margin:auto;
+}
+
+.date-pickerr label {
+  font-size: 1.9rem !important;
+}
+

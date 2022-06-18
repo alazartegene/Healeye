@@ -70,9 +70,8 @@ const reducer = (state, action) => {
     };
   }
 };
-
 const Form = () => {
-  const [value, setValue] = useState(null);
+  // const [value, setValue] = useState(null);
   const reducer = (state, action) => {
     if (action.type === "FNAME") {
       const newPatient = { ...state.Patient, firstName: action.payload };
@@ -133,6 +132,7 @@ const Form = () => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [value, setValue] = useState(new Date());
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -195,12 +195,12 @@ const Form = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="Main-container">
         {state.isModalOpen ? (
           <Alert
             sx={{
-              fontSize: "1.8rem",
-
+              backgroundColor: "#E8F9FD",
+              fontSize: "2rem",
               "& .MuiAlert-icon": { fontSize: "5rem" },
             }}
             onClose={() => {}}
@@ -289,23 +289,28 @@ const Form = () => {
               <div className="form-item">
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   <DatePicker
-                    label="Apointment Date"
+                    label="Basic example"
                     value={value}
                     onChange={(newValue) => {
                       setValue(newValue);
                     }}
-                    renderInput={({ inputRef, inputProps, InputProps }) => (
-                      <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <input ref={inputRef} {...inputProps} />
-                        {InputProps?.endAdornment}
-                      </Box>
-                    )}
+                    renderInput={(params) => <TextField {...params} />}
                   />
                 </LocalizationProvider>
               </div>
+<<<<<<< HEAD
 
               {/* <Button className="first-button" variant="contained" endIcon={<SendIcon />}></Button> */}
               <firstButton />
+=======
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+
+              {/* <div className="buttonHolder">
+                <FiristButton />
+              </div> */}
+>>>>>>> 979e24f109b2dd207b5377ef1866fc75075620e0
             </form>
           </div>
         )}
