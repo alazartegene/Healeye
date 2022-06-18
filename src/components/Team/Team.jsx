@@ -2,22 +2,19 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
 import "./Team.css";
 import item1 from "../TeamImages/member1.jpg";
 import item2 from "../TeamImages/member2.jpg";
 import item3 from "../TeamImages/member3.jpg";
-import item4 from "../TeamImages/member4.jpg";
-import item5 from "../TeamImages/member5.jpg";
-import item6 from "../TeamImages/member6.jpg";
-// import Kume from "../svg/Kume";
+
+
 function Team() {
   return (
     <Container className="top-container">
       <Row className="TeamHeader">
         <Col sm={12} className="Our-teams">
           <div className="team-heading text-center">
-            <h2> Our Doctor's </h2>
+            <h2> Our Doctors </h2>
             <h4>
               Lorem Ipsum has been the industry's standard dummy text ever since
               the 1500s, when an unknown printer took a galley of type and
