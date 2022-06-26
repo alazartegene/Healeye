@@ -36,6 +36,7 @@
   margin: 0 auto;
 }
 .btn-primary {
+  height: 2rem;
   color: rgb(56, 63, 66);
   background-color: #e8f9fd;
   outline: 2px solid rgb(81, 142, 235);

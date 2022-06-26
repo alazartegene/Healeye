@@ -1,5 +1,7 @@
 import { useState, useReducer } from "react";
 import { TextField, Alert, AlertTitle } from "@mui/material";
+import styled from "styled-components";
+
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import Box from "@mui/material/Box";
@@ -16,7 +18,6 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
 // or for Moment.js
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-
 
 const reducer = (state, action) => {
   if (action.type === "FNAME") {
@@ -70,6 +71,7 @@ const reducer = (state, action) => {
     };
   }
 };
+
 const Form = () => {
   // const [value, setValue] = useState(null);
   const reducer = (state, action) => {
@@ -156,7 +158,7 @@ const Form = () => {
       });
     }
   };
-  
+
   const fNameHanddler = (e) => {
     e.preventDefault();
     dispatch({ type: "FNAME", payload: e.target.value });
@@ -193,6 +195,12 @@ const Form = () => {
     });
   };
 
+  //   const button = styled.btn`
+  //   font-size: 2.5rem;
+  //   ${'' /* font-family: sans-serif;
+  //   text-align: center;
+  //   margin: 2rem 0; */}
+  // `;
   return (
     <>
       <div className="Main-container">
@@ -289,7 +297,10 @@ const Form = () => {
               <div className="form-item">
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   <DatePicker
-                    label="Basic example"
+                    label="Date"
+                    margin="normal"
+                    InputProps={{ style: { fontSize: 20 } }}
+                    InputLabelProps={{ style: { fontSize: 20 } }}
                     value={value}
                     onChange={(newValue) => {
                       setValue(newValue);
@@ -299,13 +310,13 @@ const Form = () => {
                 </LocalizationProvider>
               </div>
 
-              {/* <Button className="first-button" variant="contained" endIcon={<SendIcon />}></Button> */}
-           
-              <button type="submit" className="btn btn-primary">
+              <button
+                type="submit"
+                className="btn btn-primary"
+                style={{ height: 30, marginTop: 10, fontSize: 15 }}
+              >
                 Submit
               </button>
-
-              
             </form>
           </div>
         )}

@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import "./ServicesWeOffer.css";
 import Eyeglass1 from "../../Image/Eyeglass1.png";
 import EyeExamination from "../../Image/EyeExamination.png";
@@ -23,76 +22,78 @@ function ServicesWeOffer() {
           </div>
         </div>
       </Row>
-      <Row className="SecondRow">
-        <div className="SecondRowDiv">
-          <Col>
+
+      <div className="alazar">
+        <div className="RawDiv">
+          <figure>
+            <img
+              title="Full Eye Diagnosis using modern equipments by our sub specialists"
+              src={EyeExamination}
+              alt="Eye Examination"
+              style={{ width: 200, height: 200, borderRadius: 10 }}
+            />
+          </figure>
+          <div>
+            <figcaption>
+              <h3>Full Eye Diagnosis</h3>
+            </figcaption>
+          </div>
+        </div>
+
+        <div className="RawDiv">
+          <div>
             <figure>
               <img
-                title="Full Eye Diagnosis using modern equipments by our sub specialists"
-                src={EyeExamination}
-                alt="Eye Examination"
+                title="Cataract Surgery and other surgeries"
+                src={Cataract}
+                alt="Cataract Surgery"
                 style={{ width: 200, height: 200, borderRadius: 10 }}
               />
             </figure>
-            <div>
-              <figcaption>
-                <h3 className="ServiceHeaderh3">Full Eye Diagnosis</h3>
-              </figcaption>
-            </div>
-          </Col>
-          <Col>
-            <div>
-              <figure>
-                <img
-                  title="Cataract Surgery and other surgeries"
-                  src={Cataract}
-                  alt="Cataract Surgery"
-                  style={{ width: 200, height: 200, borderRadius: 10 }}
-                />
-              </figure>
-            </div>
-            <div>
-              <figcaption>
-                <h3 className="ServiceHeaderh3">Eye Surgery</h3>
-              </figcaption>
-            </div>
-          </Col>
-          <Col>
-            <div>
-              <figure>
-                <img
-                  title="Cataract Surgery and other surgeries"
-                  src={ChildEye}
-                  alt="ChildEye Treatment"
-                  style={{ width: 200, height: 200, borderRadius: 10 }}
-                />
-              </figure>
-            </div>
-            <div>
-              <figcaption>
-                <h3 className="ServiceHeaderh3">Child Eye Treatment</h3>
-              </figcaption>
-            </div>
-          </Col>
-          <Col>
-            <div>
-              <figure>
-                <img
-                  title="All types of Eyeglass Servicess"
-                  src={Eyeglass1}
-                  alt="Eye Glass Service"
-                  style={{ width: 200, height: 200, borderRadius: 10 }}
-                />
-              </figure>
-            </div>
-            <div>
-              <figcaption>
-                <h3 className="ServiceHeaderh3">Eyglass Service</h3>
-              </figcaption>
-            </div>
-          </Col>
+          </div>
+          <div>
+            <figcaption>
+              <h3>Eye Surgery</h3>
+            </figcaption>
+          </div>
         </div>
-      </Row>
+
+        <div className="RawDiv">
+          <div>
+            <figure>
+              <img
+                title="Cataract Surgery and other surgeries"
+                src={ChildEye}
+                alt="ChildEye Treatment"
+                style={{ width: 200, height: 200, borderRadius: 10 }}
+              />
+            </figure>
+          </div>
+          <div>
+            <figcaption>
+              <h3>Child Eye Treatment</h3>
+            </figcaption>
+          </div>
+        </div>
+
+        <div className="RawDiv-Last">
+          <div>
+            <figure>
+              <img
+                title="All types of Eyeglass Servicess"
+                src={Eyeglass1}
+                alt="Eye Glass Service"
+                style={{ width: 200, height: 200, borderRadius: 10 }}
+              />
+            </figure>
+          </div>
+          <div>
+            <figcaption>
+              <h3>Eyglass Service</h3>
+            </figcaption>
+          </div>
+        </div>
+      </div>
     </Container>
   );
 }

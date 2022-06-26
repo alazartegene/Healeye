@@ -16,7 +16,7 @@ const Hero = () => {
             Nam, laboriosam!
           </p>
           <a className="hero-btn" href="#">
-            Get our Service now
+            Connect to our Doctor's
           </a>
         </div>
         <div className="hero-image">

@@ -3,7 +3,7 @@ import "./hero.css";
 import Kume from "./Kume";
 const Hero = () => {
   return (
-    <>
+    <> 
       <section className="hero">
         <div className="hero-text">
           <h1>Because, We Care For Four Eye Health</h1>
