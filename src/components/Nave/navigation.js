@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo  from "../../Image/logo.png"
+import logo from "../../Image/logo.png";
 import "./nav.css";
-
 
 const Navigation = () => {
   let activeStyle = {
@@ -15,7 +14,8 @@ const Navigation = () => {
       <header className="nav-container">
         <div className="nav">
           <div className="nav-logo">
-              <img src={logo}/>
+            
+            <img src={logo}  alt="Heal Eye Logo" />
           </div>
           <div className={`${open ? "nav-links toggle" : "nav-links"}`}>
             <ul>
@@ -66,7 +66,7 @@ const Navigation = () => {
                     return isActive ? activeStyle : undefined;
                   }}
                 >
-                  Login
+                  Sign in
                 </NavLink>
               </li>
               <li></li>

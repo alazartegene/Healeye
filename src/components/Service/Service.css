@@ -2,7 +2,7 @@
   justify-content: center;
   align-items: center;
   background-color: #f1f5f8;
-  box-shadow: 0 0 2px rgb(166, 175, 184);
+  box-shadow: 0 0 1px rgb(221, 228, 235);
   border-radius: 15px;
   margin: 5rem;
   text-align: center;
@@ -11,9 +11,10 @@
   font-family: "Lora", serif;
   font-size: 5rem;
   color: #324f88;
-  margin-top: 40px;
+  padding-top: 3rem;
   margin-bottom: 20px;
 }
+
 .UpperDiv h4 {
   font-family: "Lora", serif;
   font-size: 20px;

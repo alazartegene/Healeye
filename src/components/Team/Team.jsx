@@ -1,6 +1,6 @@
 import React from "react";
 import "./Team.css";
-import item1 from "../TeamImages/member1.jpg";
+import DrKume from "../img/DrKume.png";
 import item2 from "../TeamImages/member2.jpg";
 
 function Team() {
@@ -11,40 +11,43 @@ function Team() {
           <div className="team-heading">
             <h2> Our Doctors </h2>
             <h4>
-              Hello This is Some discription about our teams
+              Meet Our Subspecialists and Specialists which are waiting for you
+              to treat you like as a king.
             </h4>
           </div>
         </div>
         <div className="doctor-cont">
           <div className="Doctors-Field">
-            <div>
+            <div className="EachDoctors">
               <div className="person">
                 <img
                   className="img-responsive"
-                  src={item1}
-                  alt="member-1"
+                  src={DrKume}
+                  alt="Dr Kumele Tolosa"
                   style={{ width: 200, height: 200, borderRadius: 400 / 2 }}
                 />
               </div>
               <div className="person-detail">
                 <div className="arrow-bottom"></div>
                 <h3> Dr. Kumele Tolosa </h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s,{" "}
-                </p>
+                <div className="Doctors-Detail">
+                  <h4>
+                    Medical Doctor (MD,FCOECSA) Associate Professor of
+                    Ophthalmology Pediatric Ophthalmology and Syrabismus fellow.
+                  </h4>
+                </div>
               </div>
             </div>
-            <div>
+            <div className="EachDoctors">
               <div className="person-detail">
                 <div className="arrow-bottom"></div>
                 <h3>Dr. Guteta G/Michael</h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s,{" "}
-                </p>
+                <div className="Doctors-Detail">
+                  <h4>
+                    Medical Doctor(MD, FCOECSA, FICO) Assistant Professor of
+                    Ophthalmology Glaucoma and cataract specialist.
+                  </h4>
+                </div>
               </div>
 
               <div className="person">
@@ -56,7 +59,7 @@ function Team() {
                 />
               </div>
             </div>
-            <div>
+            <div className="EachDoctors">
               <div className="person">
                 <img
                   className="img-responsive"
@@ -68,11 +71,12 @@ function Team() {
               <div className="person-detail">
                 <div className="arrow-bottom"></div>
                 <h3> Dr. Kumele Tolosa </h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s,{" "}
-                </p>
+                <div className="Doctors-Detail">
+                  <h4>
+                    Medical Doctor(MD, FCOECSA, FICO) Assistant Professor of
+                    Ophthalmology Glaucoma and cataract specialist.
+                  </h4>
+                </div>
               </div>
             </div>
           </div>

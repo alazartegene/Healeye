@@ -17,7 +17,7 @@
   text-align: center;
   font-size: 2rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .person-detail {
   padding-top: 20rem;
@@ -32,7 +32,7 @@
   -ms-transition: all 0.7s ease 0s;
 }
 .person-detail p {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   text-decoration: solid;
   text-align: justify;
   padding: 1rem;
@@ -46,20 +46,34 @@
   justify-content: center;
 }
 .Doctors-Field {
+  width: 80rem;
   display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)) !important;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)) !important;
   gap: 1rem;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
+}
+.EachDoctors {
+  max-height: 444px !important;
+  background-color: #f1f5f8;
+  box-shadow: 0 0 2px rgb(166, 175, 184);
+  border-radius: 15px;
+}
+.Doctors-Detail h4 {
+  padding-top: 2rem;
+  font-family: "Lora", serif;
+  font-size: 10px !important;
+  text-align: justify;
+  line-height: 20px;
 }
 .person-detail h3 {
   font-family: "Lora", serif;
   padding-top: 1rem;
   text-align: center;
-  font-size: 30px;
+  font-size: 2rem;
   color: rgb(81, 8, 83);
 }
-
 .person img {
   padding: 2%;
   margin-left: 15%;
@@ -151,6 +165,10 @@
   .team-heading h4 {
     font-size: 1.5rem;
   }
+  .EachDoctors{
+    margin: 0 1rem !important;
+    min-width: 200px !important;
+  }
   .person-detail h3 {
     font-size: 2.5rem;
   }
@@ -159,6 +177,9 @@
     font-size: 1.5rem;
   }
   .person img {
-    padding: 4rem;
+    width: 200px !important;
+    padding:20px;
+    margin-left: 0 !important;
   }
+  
 }

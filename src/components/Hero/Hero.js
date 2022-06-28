@@ -1,8 +1,8 @@
 import React from "react";
-import DocSvg from "../svg/DocSvg";
-import heroImage from "../../Image/doctor.png";
 import "./hero.css";
 import Kume from "../svg/Kume";
+
+
 const Hero = () => {
   return (
     <>
@@ -15,7 +15,7 @@ const Hero = () => {
             Voluptatum Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Nam, laboriosam!
           </p>
-          <a className="hero-btn" href="#">
+          <a className="hero-btn" href="www.healeye.com">
             Connect to our Doctor's
           </a>
         </div>

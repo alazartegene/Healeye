@@ -1,13 +1,10 @@
-// import Hero from "./components/hero";
 import Navigation from "./components/Nave/navigation.js";
-import { useState } from "react";
-import { BrowserRouter, Routes, Route, useRoutes } from "react-router-dom";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Form from "./pages/Form/Form";
 import Home from "./pages/Home/Home";
-
-// import Footer from "./components/Footer/Footer.js";
-// import Teame from "./components/Team/Team.jsx";
-// import DocSvg from "./components/svg/DocSvg";
+import SignIn from "./pages/Sign in/Signin.js";
+import Service from "./components/Service/Service.js";
 
 const App = () => {
   return (
@@ -17,10 +14,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="book" element={<Form />}></Route>
+          <Route path="Services" element={<Service />}></Route>
+          <Route path="Sign in" element={<SignIn />}></Route>
         </Routes>
       </BrowserRouter>
-      
-     
     </>
   );
 };
